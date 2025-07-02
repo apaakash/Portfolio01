@@ -1,10 +1,11 @@
 function SendData(event) {
-    event.preventDefault(); // Prevents the form from submitting and reloading the page
+    event.preventDefault();
+    alert("Sending started..."); // Add this for debugging
 
     Email.send({
         Host: "smtp.elasticemail.com",
         Username: "3idiotsvlogs0@gmail.com",
-        Password: "9C40169564AE1D2A899CB214826F41F94AE1", // Be cautious: never expose in production
+        Password: "9C40169564AE1D2A899CB214826F41F94AE1",
         To: '3idiotsvlogs0@gmail.com',
         From: document.getElementById("E1").value,
         Subject: "Portfolio Mail",
